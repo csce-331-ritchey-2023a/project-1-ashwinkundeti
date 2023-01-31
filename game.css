@@ -1,0 +1,23 @@
+#gameContainer {
+  text-align: center;
+}
+
+#gameMessage, #userChoice, #computerChoice {
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+#visualizer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
