@@ -2,13 +2,18 @@
 <html>
   <head>
     <title>Service</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link id="mainStyleSheet" rel="stylesheet" type="text/css" href="style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Service</h1>
     </header>
+    <div class="whole">
+    <div class="column left">
     <nav>
       <ul>
         <li><a href="index.html">About me</a></li>
@@ -16,8 +21,11 @@
         <li><a href="ashwin_resume.pdf">Qualifications</a></li>
         <li><a href="service.html">Service</a></li>
         <li><a href="game.html">AI Page</a></li>
+        <li><button onclick="toggleStyleSheet()" type="button">Style</button></li>
       </ul>
     </nav>
+    </div>
+    <div class="column right">
     <main>
         <section id="Service">
             <h2>Volunteer at Habitat for Humanity</h2>
@@ -37,8 +45,11 @@
             </p>
         </section>
     </main>
+    </div>
+    </div>
     <footer>
       <p>Copyright © 2022 Ashwin Kundeti</p>
     </footer>
+    <script src="functions.js"></script>
   </body>
 </html>

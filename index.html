@@ -2,13 +2,18 @@
 <html>
   <head>
     <title>Ashwin Kundeti</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link id="mainStyleSheet" rel="stylesheet" type="text/css" href="style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Ashwin Kundeti</h1>
     </header>
+    <div class="whole">
+    <div class="column left">
     <nav>
       <ul>
         <li><a href="index.html">About me</a></li>
@@ -16,11 +21,14 @@
         <li><a href="ashwin_resume.pdf">Qualifications</a></li>
         <li><a href="service.html">Service</a></li>
         <li><a href="game.html">AI Page</a></li>
+        <li><button onclick="toggleStyleSheet()" type="button">Style</button></li>
       </ul>
     </nav>
+    </div>
+    <div class="column right">
     <main>
       <section id="intro" class="center-section">
-        <img src="propic.JPG" alt="Picture of Ashwin Kundeti" class="clip-circle">
+        <img src="propic.JPG" alt="Picture of Ashwin Kundeti" class="clip">
         <h2>Howdy, I'm Ashwin</h2>
         <p>I am a Computer Engineering Major here at Texas A&M University. 
             I was born and raised in Colorado Springs, then I moved to the Dallas area around 2013.
@@ -41,10 +49,19 @@
         <a href="mailto:ashwin.kundeti@gmail.com">
           <img src="gmail.png" alt="gmail">
         </a>
+        <a href="https://www.instagram.com/ashwin_k22/?hl=en">
+          <img src="insta.png" alt="instagram">
+        </a>
+        <a href="https://devpost.com/ashwin-kundeti">
+          <img src="devpost.png" alt="devpost">
+        </a>
       </section>
     </main>
+    </div>
+    </div>
     <footer>
       <p>Copyright © 2022 Ashwin Kundeti</p>
     </footer>
+    <script src="functions.js"></script>
   </body>
 </html>

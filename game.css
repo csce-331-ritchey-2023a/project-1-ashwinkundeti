@@ -1,23 +1,15 @@
-#gameContainer {
-  text-align: center;
-}
-
-#gameMessage, #userChoice, #computerChoice {
-  margin: 10px 0;
-}
-
-button {
-  padding: 10px 20px;
-  margin: 20px 0;
-}
-
-#visualizer {
+.container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 300px;
-  width: 300px;
-  margin: 0 auto;
-  position: relative;
 }
 
+.options {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.option {
+  cursor: pointer;
+}

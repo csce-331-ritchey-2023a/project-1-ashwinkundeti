@@ -2,13 +2,18 @@
 <html>
   <head>
     <title>Projects</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link id="mainStyleSheet" rel="stylesheet" type="text/css" href="style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <h1>Projects</h1>
     </header>
+    <div class="whole">
+    <div class="column left">
     <nav>
       <ul>
         <li><a href="index.html">About me</a></li>
@@ -16,8 +21,11 @@
         <li><a href="ashwin_resume.pdf">Qualifications</a></li>
         <li><a href="service.html">Service</a></li>
         <li><a href="game.html">AI Page</a></li>
+        <li><button onclick="toggleStyleSheet()" type="button">Style</button></li>
       </ul>
     </nav>
+    </div>
+    <div class="column right">
     <main>
         <section id="Projects">
             <h2>SC22 Student Cluster Competition</h2>
@@ -26,8 +34,10 @@
                 Over the Spring Semester, I prepared for the student cluster competition which A&M was selected for and competed in November.
                 It's a 48 hour competition that occurs annually at the SC conference which was in Dallas for 2022.
                 It involved each of the selected teams to bring a cluster and compete in a series of benchmarks and 
-                it also tested our ability to run programs such as PHASTA (a Navier Stokes Equation Solver), LAMMPS,
-                and other programs. I worked with the HPCG benchmark and PHASTA. <a href="https://sc22.supercomputing.org/program/studentssc/student-cluster-competition/">Link</a>
+                it also tested our ability to run programs such as PHASTA (a Navier Stokes Equation Solver), LAMMPS (a molecular dynamics simulator),
+                an earthquake simulating mystery program, a reproducability challenge involving dace with Python, 
+                and other programs. I worked with the HPCG benchmark and PHASTA. I optimized the values that 
+                produced the best results with the hardware we had. <a href="https://sc22.supercomputing.org/program/studentssc/student-cluster-competition/">Link</a>
             </p>
             <h2>Amazon Spend Analyzer</h2>
             <img id="amazon" src="amazon.png" alt="Amazon logo">
@@ -39,20 +49,23 @@
             <h2>Random Password Generator</h2>
             <img id="dice" src="dice.jpg" alt="dice">
             <p>
-                During the winter break, I also worked on this simple random password generator. All the user has to specify is 
-                the number of passwords they want and how many characters the password should be. It was a fun simple project.  <a href="https://github.com/ashwin-k22/projects/blob/main/random_password_generator.py">Link</a>
+                During the same winter break of sophomore year, I also worked on this simple random password generator. All the user has to specify is 
+                the number of passwords they want and how many characters the password should be. I made sure to have a good mix of uppercase characters, lowercase characters, and symbols so it passes requirements websites usually impose.It was a fun simple project. <a href="https://github.com/ashwin-k22/projects/blob/main/random_password_generator.py">Link</a>
             </p>
             <h2>Business Case</h2>
             <img id="compost" src="compost.jpg" alt="compost">
             <p>
                 During the summer of 2021, I was hired by an entrepreneur to create a business case for a potential composting company. As part of the business case, 
                 I researched and analyzed similar existing businesses, marketing opportunities, competition, startup/operating costs, 
-                conducted surveys, and personally engaged in conversation with similar existing businesses.
+                conducted surveys, and personally engaged in conversation with similar existing businesses. It was a good experience and I learned about the feasilibilty of a business proposal
             </p>
         </section>
     </main>
+    </div>
+    </div>
     <footer>
         <p>Copyright © 2022 Ashwin Kundeti</p>
     </footer>
-    </body>
+    <script src="functions.js"></script>
+  </body>
 </html>

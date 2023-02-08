@@ -1,36 +1,26 @@
-const choices = ["Rock", "Paper", "Scissors"];
-const gameMessage = document.getElementById("gameMessage");
-const userChoice = document.getElementById("userChoice");
-const computerChoice = document.getElementById("computerChoice");
+const options = document.querySelectorAll(".option");
+const result = document.querySelector("#result");
 
-function getComputerChoice() {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+options.forEach(option => {
+  option.addEventListener("click", function() {
+    const computerChoice = Math.floor(Math.random() * 3);
+    const choices = ["rock", "paper", "scissors"];
+    const computerChoiceText = choices[computerChoice];
+    const userChoiceText = this.id;
 
-function playGame(userChoice) {
-  const computerChoice = getComputerChoice();
-  let message;
+    let message;
+    if (userChoiceText === computerChoiceText) {
+      message = "It's a tie!";
+    } else if (
+      (userChoiceText === "rock" && computerChoiceText === "scissors") ||
+      (userChoiceText === "paper" && computerChoiceText === "rock") ||
+      (userChoiceText === "scissors" && computerChoiceText === "paper")
+    ) {
+      message = "You win!";
+    } else {
+      message = "You lose!";
+    }
 
-  if (userChoice === computerChoice) {
-    message = "Tie!";
-  } else if (
-    (userChoice === "Rock" && computerChoice === "Scissors") ||
-    (userChoice === "Paper" && computerChoice === "Rock") ||
-    (userChoice === "Scissors" && computerChoice === "Paper")
-  ) {
-    message = "You win!";
-  } else {
-    message = "You lose!";
-  }
-
-  gameMessage.innerText = message;
-  userChoice.innerText = "Your choice: " + userChoice;
-  computerChoice.innerText = "Computer choice: " + computerChoice;
-}
-
-const playButton = document.getElementById("playButton");
-
-playButton.addEventListener("click", function() {
-  const userChoice = window.prompt("Rock, Paper, or Scissors?");
-  playGame(userChoice);
+    result.textContent = `You chose ${userChoiceText}, the computer chose ${computerChoiceText}. ${message}`;
+  });
 });
